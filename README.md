@@ -2,6 +2,8 @@
 
 An exploratory data analysis project on supermarket sales transactions, built with Python, Pandas, Matplotlib, and Seaborn. The notebook studies sales performance across time, branches, product lines, customer segments, gender, payment methods, and customer ratings.
 
+https://adityagautam19.github.io/Data-Analysis/  check dashboard for overall view.
+
 ## Project Snapshot
 
 | Item | Details |
