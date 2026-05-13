@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supermarket Sales Interactive Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">S</span>
+        <div>
+          <p class="eyebrow">Retail Analytics</p>
+          <h1>Supermarket Sales</h1>
+        </div>
+      </div>
+      <nav class="nav-list" aria-label="Dashboard sections">
+        <a href="#overview">Overview</a>
+        <a href="#time">Time Trends</a>
+        <a href="#customers">Customers</a>
+        <a href="#products">Products</a>
+        <a href="#branches">Branches</a>
+        <a href="#quality">Ratings</a>
+      </nav>
+      <div class="side-note">
+        <span class="dot"></span>
+        <p>Dataset: 1,000 transactions from Jan 1 to Mar 30, 2019.</p>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <section class="hero" id="overview">
+        <div>
+          <p class="eyebrow">Interactive EDA Dashboard</p>
+          <h2>Sales performance across branches, products, customers, and time.</h2>
+          <p class="hero-copy">Built from the SuperMarket EDA notebook with genuine aggregate results, sampled rating data, and the same analysis views presented as a polished browser dashboard.</p>
+        </div>
+        <div class="hero-panel">
+          <span>Best Signal</span>
+          <strong>Saturday + 7 PM</strong>
+          <p>Highest sales day and strongest revenue hour.</p>
+        </div>
+      </section>
+
+      <section class="kpi-grid" aria-label="Key metrics">
+        <article class="kpi-card">
+          <span>Total Sales</span>
+          <strong id="kpiSales">0</strong>
+          <small>Across all transactions</small>
+        </article>
+        <article class="kpi-card">
+          <span>Transactions</span>
+          <strong id="kpiTransactions">0</strong>
+          <small>Complete records</small>
+        </article>
+        <article class="kpi-card">
+          <span>Average Bill</span>
+          <strong id="kpiAverage">0</strong>
+          <small>Mean transaction value</small>
+        </article>
+        <article class="kpi-card">
+          <span>Gross Income</span>
+          <strong id="kpiGross">0</strong>
+          <small>5% tax income basis</small>
+        </article>
+        <article class="kpi-card">
+          <span>Average Rating</span>
+          <strong id="kpiRating">0</strong>
+          <small>Customer score out of 10</small>
+        </article>
+        <article class="kpi-card">
+          <span>Data Quality</span>
+          <strong>Clean</strong>
+          <small>0 missing, 0 duplicate rows</small>
+        </article>
+      </section>
+
+      <section class="section-header" id="time">
+        <div>
+          <p class="eyebrow">Time Trends</p>
+          <h2>When sales happen</h2>
+        </div>
+        <p>January led monthly sales, Saturday led weekday performance, and 7 PM produced the strongest hourly revenue.</p>
+      </section>
+
+      <section class="chart-grid">
+        <article class="chart-card wide">
+          <div class="card-head">
+            <div>
+              <h3>Monthly Sales</h3>
+              <p>January is the best-performing month.</p>
+            </div>
+            <span class="pill">Line</span>
+          </div>
+          <canvas id="monthlyChart" height="260"></canvas>
+        </article>
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Sales by Day</h3>
+              <p>Saturday is the weekly peak.</p>
+            </div>
+            <span class="pill">Bar</span>
+          </div>
+          <canvas id="dayChart" height="260"></canvas>
+        </article>
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Sales by Hour</h3>
+              <p>Evening demand is strongest.</p>
+            </div>
+            <span class="pill">Line</span>
+          </div>
+          <canvas id="hourChart" height="260"></canvas>
+        </article>
+      </section>
+
+      <section class="section-header" id="customers">
+        <div>
+          <p class="eyebrow">Customer Behavior</p>
+          <h2>Gender, customer type, and payment patterns</h2>
+        </div>
+      </section>
+
+      <section class="chart-grid">
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Gender Analysis</h3>
+              <p>Switch between total and average sale.</p>
+            </div>
+            <div class="segmented" role="group" aria-label="Gender metric">
+              <button class="active" data-gender-mode="total">Total</button>
+              <button data-gender-mode="average">Average</button>
+            </div>
+          </div>
+          <canvas id="genderChart" height="260"></canvas>
+        </article>
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Payment Method</h3>
+              <p>Revenue and transaction count.</p>
+            </div>
+            <div class="segmented" role="group" aria-label="Payment metric">
+              <button class="active" data-payment-mode="revenue">Revenue</button>
+              <button data-payment-mode="count">Count</button>
+            </div>
+          </div>
+          <canvas id="paymentChart" height="260"></canvas>
+        </article>
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Customer Type Sales</h3>
+              <p>Members slightly lead normal customers.</p>
+            </div>
+            <span class="pill">Compare</span>
+          </div>
+          <canvas id="customerChart" height="260"></canvas>
+        </article>
+      </section>
+
+      <section class="section-header" id="products">
+        <div>
+          <p class="eyebrow">Product Lines</p>
+          <h2>Revenue, quantity, and ratings by category</h2>
+        </div>
+      </section>
+
+      <section class="chart-grid">
+        <article class="chart-card wide">
+          <div class="card-head">
+            <div>
+              <h3>Product Line Performance</h3>
+              <p>Food and beverages leads revenue; Electronic accessories leads quantity.</p>
+            </div>
+            <div class="segmented" role="group" aria-label="Product metric">
+              <button class="active" data-product-mode="revenue">Revenue</button>
+              <button data-product-mode="quantity">Quantity</button>
+            </div>
+          </div>
+          <canvas id="productChart" height="300"></canvas>
+        </article>
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Product Ratings</h3>
+              <p>Average score by product line.</p>
+            </div>
+            <span class="pill">Rating</span>
+          </div>
+          <canvas id="productRatingChart" height="300"></canvas>
+        </article>
+      </section>
+
+      <section class="section-header" id="branches">
+        <div>
+          <p class="eyebrow">Branch Performance</p>
+          <h2>Branch C leads, but the network is balanced</h2>
+        </div>
+      </section>
+
+      <section class="chart-grid">
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Sales by Branch</h3>
+              <p>Naypyitaw is narrowly ahead.</p>
+            </div>
+            <span class="pill">Branch</span>
+          </div>
+          <canvas id="branchChart" height="270"></canvas>
+        </article>
+        <article class="chart-card wide">
+          <div class="card-head">
+            <div>
+              <h3>Branch Performance Over Time</h3>
+              <p>Monthly revenue trend by branch.</p>
+            </div>
+            <span class="pill">Multi-line</span>
+          </div>
+          <canvas id="branchMonthChart" height="270"></canvas>
+        </article>
+        <article class="chart-card wide">
+          <div class="card-head">
+            <div>
+              <h3>Branch-Wise Product Sales</h3>
+              <p>Filter branch-product combinations.</p>
+            </div>
+            <select id="branchFilter" aria-label="Filter branch">
+              <option value="All">All branches</option>
+              <option value="A">Branch A</option>
+              <option value="B">Branch B</option>
+              <option value="C">Branch C</option>
+            </select>
+          </div>
+          <canvas id="branchProductChart" height="360"></canvas>
+        </article>
+      </section>
+
+      <section class="section-header" id="quality">
+        <div>
+          <p class="eyebrow">Ratings & Relationships</p>
+          <h2>High-value purchases do not guarantee higher ratings</h2>
+        </div>
+        <p>The rating-to-sales correlation is -0.04, which is nearly zero.</p>
+      </section>
+
+      <section class="chart-grid">
+        <article class="chart-card wide">
+          <div class="card-head">
+            <div>
+              <h3>Rating vs Total Sales</h3>
+              <p>Sampled actual transactions from the dataset.</p>
+            </div>
+            <span class="pill">Correlation -0.04</span>
+          </div>
+          <canvas id="scatterChart" height="310"></canvas>
+        </article>
+        <article class="chart-card">
+          <div class="card-head">
+            <div>
+              <h3>Correlation Heatmap</h3>
+              <p>Numerical feature relationships.</p>
+            </div>
+            <span class="pill">Matrix</span>
+          </div>
+          <canvas id="heatmapChart" height="310"></canvas>
+        </article>
+      </section>
+
+      <section class="insights">
+        <article>
+          <h3>Most useful business actions</h3>
+          <ul>
+            <li>Prepare staffing and inventory for Saturdays and the 7 PM peak.</li>
+            <li>Use January sales performance as the short-term benchmark.</li>
+            <li>Keep Food and beverages highly visible because it leads revenue.</li>
+            <li>Localize branch promotions: Branch C favors Food and beverages, Branch A favors Home and lifestyle, and Branch B is strong in Sports and travel plus Health and beauty.</li>
+            <li>Analyze customer satisfaction separately from basket value because rating and sales are not meaningfully related.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
