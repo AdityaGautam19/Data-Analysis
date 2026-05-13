@@ -1,0 +1,313 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 3743 >>
+stream
+0.07 0.18 0.25 rg 0 800 595 42 re f
+BT /F2 18 Tf 1 1 1 rg 54 815 Td (Supermarket Sales EDA Report) Tj ET
+BT /F2 18 Tf 0.06 0.18 0.26 rg 54 770 Td (Supermarket Sales EDA Report) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 730 Td (Executive Summary) Tj ET
+0.78 0.86 0.88 rg 54 724 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 700 Td (This report presents an exploratory analysis of 1,000 supermarket transactions recorded) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 686 Td (between 2019-01-01 and 2019-03-30. The analysis evaluates sales patterns by month,) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 672 Td (weekday, hour, branch, product line, gender, payment method, and customer rating.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 645 Td (The supermarket generated 322,966.75 in total sales and 15,379.37 in gross income during) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 631 Td (the analysis period. Overall performance was strongest in January, on Saturdays, and) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 617 Td (around 7 PM. Branch C in Naypyitaw produced the highest branch revenue, although all three) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 603 Td (branches were very close in total sales.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 576 Td (The findings show that revenue is distributed fairly evenly across branches and product) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 562 Td (categories, with a few clear leaders. Food and beverages generated the highest product-) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 548 Td (line revenue, while Electronic accessories sold the highest number of units. Customer) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 534 Td (ratings had almost no linear relationship with transaction value, which means larger) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 520 Td (purchases did not necessarily produce higher satisfaction scores.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 487 Td (Dataset Overview) Tj ET
+0.78 0.86 0.88 rg 54 481 487 1 re f
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 457 Td (Metric  |  Value) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 441 Td (Total records  |  1,000) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 425 Td (Original columns  |  17) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 409 Td (Engineered columns  |  Month, DayOfWeek, Hour) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 393 Td (Date range  |  2019-01-01 to 2019-03-30) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 377 Td (Total sales  |  322,966.75) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 361 Td (Average transaction value  |  322.97) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 345 Td (Total gross income  |  15,379.37) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 329 Td (Average customer rating  |  6.97) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 313 Td (Missing values  |  0) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 297 Td (Duplicate rows  |  0) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 273 Td (The dataset is clean and complete. No missing values or duplicate rows were found, which) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 259 Td (makes it suitable for direct exploratory analysis.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 226 Td (Methodology) Tj ET
+0.78 0.86 0.88 rg 54 220 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 196 Td (The notebook follows a structured EDA process:) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 169 Td (1. Load the supermarket sales dataset using Pandas.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 153 Td (2. Inspect column names, data types, shape, sample rows, and descriptive) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 139 Td (statistics.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 123 Td (3. Check for missing values and duplicate records.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 107 Td (4. Convert Date and Time into datetime formats.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 91 Td (5. Create new analysis fields: Month, DayOfWeek, and Hour.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 75 Td (6. Group transaction data across business dimensions.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Length 3190 >>
+stream
+BT /F1 10 Tf 0 0 0 rg 54 790 Td (7. Visualize trends using line charts, bar charts, scatter plots, regression) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 776 Td (plots, and a correlation heatmap.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 760 Td (8. Interpret patterns into business insights.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 730 Td (Sales Performance by Month) Tj ET
+0.78 0.86 0.88 rg 54 724 487 1 re f
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 700 Td (Month  |  Total Sales) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 684 Td (January  |  116,291.87) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 668 Td (March  |  109,455.51) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 652 Td (February  |  97,219.37) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 628 Td (January was the best-performing month, followed by March and February. February had the) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 614 Td (lowest total sales, which may be partly influenced by having fewer calendar days than) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 600 Td (January and March.) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 573 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 547 Td (January should be treated as the benchmark month for campaign planning, stock allocation,) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 533 Td (and revenue targets. The business should compare January promotions, product availability,) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 519 Td (and customer traffic against February and March to understand what drove the stronger) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 505 Td (result.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 472 Td (Sales Performance by Day of Week) Tj ET
+0.78 0.86 0.88 rg 54 466 487 1 re f
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 442 Td (Day  |  Total Sales) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 426 Td (Saturday  |  56,120.81) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 410 Td (Tuesday  |  51,482.25) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 394 Td (Thursday  |  45,349.25) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 378 Td (Sunday  |  44,457.89) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 362 Td (Friday  |  43,926.34) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 346 Td (Wednesday  |  43,731.14) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 330 Td (Monday  |  37,899.08) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 306 Td (Saturday generated the highest revenue, while Monday was the weakest day.) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 279 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 253 Td (The supermarket appears to benefit from weekend shopping behavior, especially on Saturday.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 239 Td (Staffing, inventory replenishment, and promotional displays should be strongest before and) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 225 Td (during Saturday trading hours.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 192 Td (Gender-Based Sales Analysis) Tj ET
+0.78 0.86 0.88 rg 54 186 487 1 re f
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 162 Td (Gender  |  Total Sales  |  Average Transaction Value) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 146 Td (Female  |  167,882.93  |  335.10) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 130 Td (Male  |  155,083.82  |  310.79) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 106 Td (Female customers generated both higher total revenue and higher average transaction value.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 3079 >>
+stream
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 790 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 764 Td (Female customers represented a slightly stronger revenue segment in this dataset. This) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 750 Td (does not mean marketing should exclude male customers, but it does suggest that campaigns,) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 736 Td (bundles, or loyalty offers targeted toward high-value female shopping behavior could be) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 722 Td (effective.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 689 Td (Product-Line Analysis) Tj ET
+0.78 0.86 0.88 rg 54 683 487 1 re f
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 659 Td (Quantity Sold) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 633 Td (Product Line  |  Quantity Sold) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 617 Td (Electronic accessories  |  971) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 601 Td (Food and beverages  |  952) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 585 Td (Sports and travel  |  920) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 569 Td (Home and lifestyle  |  911) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 553 Td (Fashion accessories  |  902) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 537 Td (Health and beauty  |  854) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 513 Td (Revenue) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 487 Td (Product Line  |  Total Revenue) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 471 Td (Food and beverages  |  56,144.84) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 455 Td (Sports and travel  |  55,122.83) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 439 Td (Electronic accessories  |  54,337.53) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 423 Td (Fashion accessories  |  54,305.90) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 407 Td (Home and lifestyle  |  53,861.91) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 391 Td (Health and beauty  |  49,193.74) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 367 Td (Food and beverages led revenue, while Electronic accessories led unit volume.) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 340 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 314 Td (Food and beverages is the strongest revenue category and should receive priority in) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 300 Td (promotions, shelf visibility, and stock planning. Electronic accessories has strong unit) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 286 Td (movement, making it useful for volume-driven promotions.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 253 Td (Branch and City Performance) Tj ET
+0.78 0.86 0.88 rg 54 247 487 1 re f
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 223 Td (Branch / City  |  Total Sales) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 207 Td (C - Naypyitaw  |  110,568.71) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 191 Td (A - Yangon  |  106,200.37) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 175 Td (B - Mandalay  |  106,197.67) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 151 Td (Branch C was the top performer, but the difference between branches was not large. Branch) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 137 Td (A and Branch B were almost identical in total sales.) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 110 Td (Insight) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 3283 >>
+stream
+BT /F1 10 Tf 0 0 0 rg 54 790 Td (Branch C should be reviewed as a best-practice location. However, because all three) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 776 Td (branches are close, the business has a balanced branch network rather than one branch) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 762 Td (carrying the entire sales performance.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 729 Td (Branch-Wise Product Strengths) Tj ET
+0.78 0.86 0.88 rg 54 723 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 699 Td (Top branch-product combinations:) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 672 Td (Branch  |  Product Line  |  Total Sales) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 656 Td (C  |  Food and beverages  |  23,766.86) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 640 Td (A  |  Home and lifestyle  |  22,417.20) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 624 Td (C  |  Fashion accessories  |  21,560.07) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 608 Td (B  |  Sports and travel  |  19,988.20) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 592 Td (B  |  Health and beauty  |  19,980.66) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 568 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 542 Td (Each branch has different category strengths. Branch C performs especially well in Food) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 528 Td (and beverages, Branch A is strong in Home and lifestyle, and Branch B has strong results) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 514 Td (in Sports and travel plus Health and beauty. Localized inventory and promotions would) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 500 Td (likely perform better than a single identical strategy for every branch.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 467 Td (Payment Method Analysis) Tj ET
+0.78 0.86 0.88 rg 54 461 487 1 re f
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 437 Td (Payment Method  |  Total Sales) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 421 Td (Cash  |  112,206.57) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 405 Td (Ewallet  |  109,993.11) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 389 Td (Credit card  |  100,767.07) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 365 Td (Cash generated the highest revenue, followed closely by Ewallet. Credit card was the) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 351 Td (lowest revenue contributor.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 324 Td (Transaction counts were also balanced:) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 297 Td (Payment Method  |  Transactions) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 281 Td (Ewallet  |  345) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 265 Td (Cash  |  344) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 249 Td (Credit card  |  311) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 225 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 199 Td (Cash and Ewallet are both important payment channels. Since Ewallet has the highest) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 185 Td (transaction count but Cash has the highest revenue, Ewallet may be slightly more frequent) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 171 Td (while Cash may include slightly higher-value purchases.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 138 Td (Hourly Sales Analysis) Tj ET
+0.78 0.86 0.88 rg 54 132 487 1 re f
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 108 Td (Hour  |  Total Sales) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 92 Td (19  |  39,699.51) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 76 Td (13  |  34,723.23) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Length 2911 >>
+stream
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 790 Td (10  |  31,421.48) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 774 Td (15  |  31,179.51) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 758 Td (14  |  30,828.40) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 734 Td (The highest sales occurred at 19:00 / 7 PM, followed by 13:00 / 1 PM and 10:00 / 10 AM.) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 707 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 681 Td (Evening shopping is especially valuable. The supermarket should make sure high-demand) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 667 Td (categories are stocked and staff coverage is strong during the evening peak.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 634 Td (Rating and Sales Relationship) Tj ET
+0.78 0.86 0.88 rg 54 628 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 604 Td (The correlation between Rating and Total sales was:) Tj ET
+BT /F3 8.5 Tf 0.12 0.12 0.12 rg 54 569 Td (-0.04) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 537 Td (This is very close to zero, meaning there is no meaningful linear relationship between) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 523 Td (customer rating and transaction size.) Tj ET
+BT /F2 12 Tf 0.12 0.24 0.30 rg 54 496 Td (Insight) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 470 Td (Customer satisfaction should not be judged only by sales value. A customer can spend more) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 456 Td (without necessarily giving a better rating, and smaller purchases can still reflect a) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 442 Td (positive customer experience.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 409 Td (Correlation Heatmap Interpretation) Tj ET
+0.78 0.86 0.88 rg 54 403 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 379 Td (The numerical correlation analysis focused on:) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 352 Td (- Unit price) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 336 Td (- Quantity) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 320 Td (- Total) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 304 Td (- Rating) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 280 Td (Total is naturally related to Quantity and Unit price because transaction value is) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 266 Td (calculated from price and quantity. Rating does not show a meaningful relationship with) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 252 Td (Total, supporting the earlier scatter plot result.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 219 Td (Business Recommendations) Tj ET
+0.78 0.86 0.88 rg 54 213 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 189 Td (1. Strengthen Saturday operations) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 173 Td (- Schedule enough staff.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 157 Td (- Prepare inventory before weekend demand.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 141 Td (- Launch weekend-focused offers.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 117 Td (2. Use January as a performance benchmark) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 101 Td (- Review January sales conditions.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 85 Td (- Compare promotions, category availability, and traffic patterns across months.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Length 2813 >>
+stream
+BT /F1 10 Tf 0 0 0 rg 54 790 Td (3. Localize strategy by branch) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 774 Td (- Branch C: push Food and beverages and Fashion accessories.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 758 Td (- Branch A: protect Home and lifestyle performance.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 742 Td (- Branch B: build on Sports and travel plus Health and beauty.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 718 Td (4. Support evening sales peaks) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 702 Td (- Keep shelves replenished before 7 PM.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 686 Td (- Use evening promotions for high-margin or high-demand products.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 662 Td (5. Treat customer ratings as a separate quality signal) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 646 Td (- Do not assume high sales mean high satisfaction.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 630 Td (- Analyze rating drivers separately by branch, product line, and customer type.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 606 Td (6. Protect top revenue categories) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 590 Td (- Prioritize Food and beverages, Sports and travel, and Electronic accessories in) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 576 Td (  inventory and promotional planning.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 546 Td (Limitations) Tj ET
+0.78 0.86 0.88 rg 54 540 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 516 Td (- The dataset covers only three months, so long-term seasonality cannot be) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 502 Td (  confirmed.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 486 Td (- The notebook uses local file paths, which should be converted to relative paths) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 472 Td (  for reproducibility.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 456 Td (- The analysis is descriptive, not predictive.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 440 Td (- External factors such as holidays, promotions, weather, and local events are not) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 426 Td (  included.) Tj ET
+BT /F2 14 Tf 0.08 0.31 0.42 rg 54 396 Td (Conclusion) Tj ET
+0.78 0.86 0.88 rg 54 390 487 1 re f
+BT /F1 10 Tf 0 0 0 rg 54 366 Td (The supermarket shows balanced branch performance, strong weekend revenue, and clear) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 352 Td (product-line opportunities. January, Saturday, Branch C, Food and beverages, Cash) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 338 Td (payments, and the 7 PM shopping window are the strongest signals in the dataset.) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 311 Td (The project successfully demonstrates how exploratory data analysis can convert) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 297 Td (transaction records into actionable business insights. With improved dataset packaging and) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 283 Td (a few additional analyses, this notebook can become a strong portfolio-ready retail) Tj ET
+BT /F1 10 Tf 0 0 0 rg 54 269 Td (analytics project.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 4 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 5 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+14 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+15 0 obj
+<< /Type /Page /Parent 16 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 9 0 R >>
+endobj
+16 0 obj
+<< /Type /Pages /Kids [10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R] /Count 6 >>
+endobj
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000000228 00000 n 
+0000004023 00000 n 
+0000007265 00000 n 
+0000010396 00000 n 
+0000013731 00000 n 
+0000016694 00000 n 
+0000019559 00000 n 
+0000019707 00000 n 
+0000019855 00000 n 
+0000020003 00000 n 
+0000020151 00000 n 
+0000020299 00000 n 
+0000020447 00000 n 
+0000020541 00000 n 
+trailer
+<< /Size 18 /Root 17 0 R >>
+startxref
+20592
+%%EOF
